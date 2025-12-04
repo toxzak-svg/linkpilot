@@ -46,11 +46,11 @@ class LinkPilot_Orphaned {
         $site_url = home_url();
         $site_url_escaped = $wpdb->esc_like( $site_url );
         
-        // Get all published posts of the specified types
+        // Get all published posts of the specified types, including content
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery
         $all_posts = $wpdb->get_results(
             $wpdb->prepare(
-                "SELECT ID, post_title, post_type, post_date, guid
+                "SELECT ID, post_title, post_content, post_type, post_date, guid
                 FROM {$wpdb->posts}
                 WHERE post_status = 'publish'
                 AND post_type IN ({$post_type_placeholders})
@@ -85,14 +85,7 @@ class LinkPilot_Orphaned {
         $incoming_links = array();
         
         foreach ( $all_posts as $source_post ) {
-            // Get the post content
-            // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery
-            $content = $wpdb->get_var(
-                $wpdb->prepare(
-                    "SELECT post_content FROM {$wpdb->posts} WHERE ID = %d",
-                    $source_post->ID
-                )
-            );
+            $content = $source_post->post_content;
             
             if ( empty( $content ) ) {
                 continue;

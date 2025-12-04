@@ -70,27 +70,30 @@ const LinkPilotSidebar = () => {
     const copyToClipboard = useCallback((url, title) => {
         const linkHtml = `<a href="${url}">${title}</a>`;
         
-        // Try to copy as HTML
+        // Try to copy as HTML using modern Clipboard API
         if (navigator.clipboard && navigator.clipboard.write) {
             const blob = new Blob([linkHtml], { type: 'text/html' });
             const clipboardItem = new ClipboardItem({ 'text/html': blob });
             navigator.clipboard.write([clipboardItem]).then(() => {
                 showToast(__('Link copied to clipboard!', 'linkpilot'));
             }).catch(() => {
-                // Fallback to plain text
+                // Fallback to plain text using modern API
                 navigator.clipboard.writeText(url).then(() => {
                     showToast(__('URL copied to clipboard!', 'linkpilot'));
+                }).catch(() => {
+                    showToast(__('Failed to copy to clipboard', 'linkpilot'));
                 });
             });
+        } else if (navigator.clipboard && navigator.clipboard.writeText) {
+            // Fallback to writeText if write is not available
+            navigator.clipboard.writeText(url).then(() => {
+                showToast(__('URL copied to clipboard!', 'linkpilot'));
+            }).catch(() => {
+                showToast(__('Failed to copy to clipboard', 'linkpilot'));
+            });
         } else {
-            // Fallback for older browsers
-            const textArea = document.createElement('textarea');
-            textArea.value = url;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textArea);
-            showToast(__('URL copied to clipboard!', 'linkpilot'));
+            // Final fallback - show the URL for manual copying
+            showToast(__('Please copy this URL manually: ', 'linkpilot') + url);
         }
     }, []);
 

@@ -48,9 +48,9 @@ class LinkPilot_Analyzer {
      * @return array Array of keywords with their frequency
      */
     public static function extract_keywords( $content, $limit = 20 ) {
-        // Strip HTML tags and shortcodes
-        $content = wp_strip_all_tags( $content );
+        // Strip shortcodes first, then HTML tags
         $content = strip_shortcodes( $content );
+        $content = wp_strip_all_tags( $content );
         
         // Convert to lowercase
         $content = strtolower( $content );
