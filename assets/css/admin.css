@@ -1,0 +1,204 @@
+/**
+ * LinkPilot Admin Styles
+ */
+
+.linkpilot-admin {
+    max-width: 1200px;
+}
+
+.linkpilot-admin h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.linkpilot-admin h1 .dashicons {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.linkpilot-description {
+    background: #fff;
+    padding: 15px 20px;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.linkpilot-description p {
+    margin: 0;
+    font-size: 14px;
+    color: #50575e;
+}
+
+.linkpilot-filters {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+    padding: 15px 20px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+}
+
+.linkpilot-filters label {
+    font-weight: 600;
+}
+
+.linkpilot-filters select {
+    min-width: 200px;
+    height: auto;
+    min-height: 36px;
+}
+
+#linkpilot-scan-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 36px;
+}
+
+#linkpilot-scan-btn .dashicons {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    line-height: 1;
+}
+
+.linkpilot-loading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+}
+
+.linkpilot-loading .spinner {
+    float: none;
+    margin: 0;
+}
+
+.linkpilot-results {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.linkpilot-summary {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #c3c4c7;
+}
+
+#linkpilot-total-count {
+    color: #d63638;
+    font-size: 24px;
+}
+
+.linkpilot-results .wp-list-table {
+    margin-top: 0;
+}
+
+.linkpilot-results .column-title {
+    width: 40%;
+}
+
+.linkpilot-results .column-type {
+    width: 15%;
+}
+
+.linkpilot-results .column-date {
+    width: 20%;
+}
+
+.linkpilot-results .column-actions {
+    width: 25%;
+}
+
+.linkpilot-results .row-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.linkpilot-results .row-actions a {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.linkpilot-results .row-actions .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.linkpilot-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #c3c4c7;
+}
+
+.linkpilot-pagination button {
+    min-width: 36px;
+}
+
+.linkpilot-pagination button.current {
+    background: #2271b1;
+    color: #fff;
+    border-color: #2271b1;
+}
+
+.linkpilot-no-results {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+}
+
+.linkpilot-no-results .dashicons {
+    font-size: 60px;
+    width: 60px;
+    height: 60px;
+    color: #00a32a;
+}
+
+.linkpilot-no-results p {
+    font-size: 16px;
+    color: #50575e;
+    margin-top: 15px;
+}
+
+.linkpilot-error {
+    margin: 20px 0;
+}
+
+/* Post type badge */
+.linkpilot-post-type-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background: #f0f0f1;
+    border-radius: 3px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.linkpilot-post-type-badge.post-type-post {
+    background: #e7f5e8;
+    color: #1e4620;
+}
+
+.linkpilot-post-type-badge.post-type-page {
+    background: #e5f1f8;
+    color: #1e3a5f;
+}

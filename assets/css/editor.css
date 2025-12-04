@@ -1,0 +1,218 @@
+/**
+ * LinkPilot Editor Styles
+ */
+
+.linkpilot-panel {
+    padding: 0;
+}
+
+.linkpilot-panel .components-panel__body {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.linkpilot-analyze-section {
+    padding: 16px;
+}
+
+.linkpilot-analyze-btn {
+    width: 100%;
+    justify-content: center;
+}
+
+.linkpilot-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 20px;
+    color: #757575;
+}
+
+.linkpilot-keywords-section {
+    padding: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.linkpilot-keywords-section h4 {
+    margin: 0 0 12px 0;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #757575;
+}
+
+.linkpilot-keywords-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.linkpilot-keyword-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: #f0f0f1;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #1e1e1e;
+}
+
+.linkpilot-keyword-tag .keyword-count {
+    background: #2271b1;
+    color: #fff;
+    padding: 1px 5px;
+    border-radius: 10px;
+    font-size: 10px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.linkpilot-suggestions-section {
+    padding: 16px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.linkpilot-suggestions-section h4 {
+    margin: 0 0 12px 0;
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #757575;
+}
+
+.linkpilot-suggestion-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 10px;
+    transition: border-color 0.15s ease;
+}
+
+.linkpilot-suggestion-card:hover {
+    border-color: #2271b1;
+}
+
+.linkpilot-suggestion-card:last-child {
+    margin-bottom: 0;
+}
+
+.linkpilot-suggestion-title {
+    font-weight: 500;
+    font-size: 13px;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    color: #1e1e1e;
+}
+
+.linkpilot-suggestion-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.linkpilot-suggestion-type {
+    display: inline-block;
+    padding: 2px 6px;
+    background: #f0f0f1;
+    border-radius: 3px;
+    font-size: 11px;
+    text-transform: capitalize;
+    color: #50575e;
+}
+
+.linkpilot-suggestion-score {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 11px;
+    color: #00a32a;
+}
+
+.linkpilot-suggestion-score .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.linkpilot-suggestion-terms {
+    font-size: 11px;
+    color: #757575;
+    margin-bottom: 10px;
+}
+
+.linkpilot-suggestion-terms strong {
+    color: #1e1e1e;
+}
+
+.linkpilot-suggestion-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.linkpilot-suggestion-actions .components-button {
+    flex: 1;
+    justify-content: center;
+}
+
+.linkpilot-no-suggestions {
+    text-align: center;
+    padding: 20px;
+    color: #757575;
+}
+
+.linkpilot-no-suggestions .dashicons {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+    opacity: 0.5;
+}
+
+.linkpilot-no-suggestions p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.linkpilot-error {
+    padding: 16px;
+    color: #d63638;
+    text-align: center;
+}
+
+.linkpilot-error .dashicons {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+}
+
+/* Copied toast notification */
+.linkpilot-copied-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1e1e1e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    z-index: 100000;
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
