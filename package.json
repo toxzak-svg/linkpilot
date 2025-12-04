@@ -1,0 +1,33 @@
+{
+  "name": "linkpilot",
+  "version": "1.0.0",
+  "description": "AI-powered internal link suggestions and orphaned content rescue for WordPress",
+  "main": "index.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "lint:js": "wp-scripts lint-js",
+    "lint:css": "wp-scripts lint-style",
+    "format": "wp-scripts format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toxzak-svg/linkpilot.git"
+  },
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "internal-linking",
+    "seo"
+  ],
+  "author": "Zachary Maronek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toxzak-svg/linkpilot/issues"
+  },
+  "homepage": "https://github.com/toxzak-svg/linkpilot#readme",
+  "devDependencies": {
+    "@wordpress/icons": "^9.49.0",
+    "@wordpress/scripts": "^27.0.0"
+  }
+}
