@@ -44,7 +44,6 @@ class LinkPilot_Orphaned {
         
         // Get site URL for matching internal links
         $site_url = home_url();
-        $site_url_escaped = $wpdb->esc_like( $site_url );
         
         // Get all published posts of the specified types, including content
         // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery
