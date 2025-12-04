@@ -73,6 +73,7 @@
         },
 
         renderResults: function(posts, total) {
+            var self = this;
             var $tbody = $('#linkpilot-results-body');
             $tbody.empty();
 
@@ -145,9 +146,6 @@
             $('#linkpilot-error').show().find('p').text(message);
         }
     };
-
-    // Use self reference for callbacks
-    var self = LinkPilotAdmin;
 
     $(document).ready(function() {
         LinkPilotAdmin.init();

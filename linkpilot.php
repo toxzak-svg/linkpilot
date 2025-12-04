@@ -98,7 +98,7 @@ final class LinkPilot {
             $asset = include $asset_file;
         } else {
             $asset = array(
-                'dependencies' => array( 'wp-plugins', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-data', 'wp-api-fetch', 'wp-i18n' ),
+                'dependencies' => array( 'wp-plugins', 'wp-edit-post', 'wp-element', 'wp-components', 'wp-data', 'wp-api-fetch', 'wp-i18n', 'wp-primitives' ),
                 'version'      => LINKPILOT_VERSION,
             );
         }
