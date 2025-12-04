@@ -35,10 +35,10 @@
 
             // Make AJAX request
             $.ajax({
-                url: linkpilotData.restUrl + 'orphaned',
+                url: linkpilotAdmin.restUrl + 'orphaned',
                 method: 'GET',
                 beforeSend: function(xhr) {
-                    xhr.setRequestHeader('X-WP-Nonce', linkpilotData.nonce);
+                    xhr.setRequestHeader('X-WP-Nonce', linkpilotAdmin.nonce);
                 },
                 data: {
                     post_type: postTypes,

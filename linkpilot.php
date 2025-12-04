@@ -155,8 +155,8 @@ final class LinkPilot {
             'linkpilot-admin',
             'linkpilotAdmin',
             array(
-                'ajaxUrl' => admin_url( 'admin-ajax.php' ),
-                'nonce'   => wp_create_nonce( 'linkpilot_admin_nonce' ),
+                'restUrl' => rest_url( 'linkpilot/v1/' ),
+                'nonce'   => wp_create_nonce( 'wp_rest' ),
             )
         );
     }
